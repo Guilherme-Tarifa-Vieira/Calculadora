@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgb(145, 61, 201) 0%,
+    rgb(127, 9, 206) 100%
+  );
+  background-size: 200% 200%;
+  animation: color 15s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calculadora {
+  position: relative;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.calculadora .value {
+  grid-column: span 4;
+  height: 100px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.calculadora span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.6px);
+  -webkit-backdrop-filter: blur(9.6px);
+  border: 1px solid rgba(255, 255, 255, 0.71);
+  place-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.calculadora span:active {
+  background: #74ff3b;
+  color: #111;
+}
+
+.calculadora span.limpar {
+  grid-column: span 2;
+  width: 120px;
+  background: #8b0718;
+}
+
+.calculadora span.mais {
+  grid-row: span 2;
+  height: 120px;
+  background: #440fc2;
+}
+
+.calculadora span.igual {
+  background: #03b1ff;
+}
+
+.calculadora span.menos {
+  background: #e2224c;
+}
+
+.calculadora span.vezes {
+  background: #85992b;
+}
